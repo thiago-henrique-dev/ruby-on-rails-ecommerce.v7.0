@@ -79,7 +79,7 @@ group :test do
   gem "selenium-webdriver"
   gem "webdrivers"
   gem 'database_cleaner'
-  gem 'shoulds_metchers'
+  gem 'shoulda-matchers'
   gem 'simplecov'
   gem 'vcr'
 
