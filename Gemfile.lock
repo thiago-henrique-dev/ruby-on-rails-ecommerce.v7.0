@@ -68,6 +68,7 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.1)
       public_suffix (>= 2.0.2, < 6.0)
+    awesome_print (1.9.2)
     bindex (0.8.1)
     bootsnap (1.13.0)
       msgpack (~> 1.2)
@@ -125,8 +126,6 @@ GEM
     nokogiri (1.13.9-x86_64-linux)
       racc (~> 1.4)
     pg (1.4.4)
-    postgresql (1.0.0)
-      pg
     public_suffix (5.0.0)
     puma (5.6.5)
       nio4r (~> 2.0)
@@ -209,6 +208,7 @@ PLATFORMS
   x86_64-linux
 
 DEPENDENCIES
+  awesome_print
   bootsnap
   capybara
   cssbundling-rails
@@ -216,7 +216,6 @@ DEPENDENCIES
   jbuilder
   jsbundling-rails
   pg (~> 1.1)
-  postgresql
   puma (~> 5.0)
   rails (~> 7.0.4)
   selenium-webdriver
