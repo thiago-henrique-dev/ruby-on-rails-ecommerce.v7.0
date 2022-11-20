@@ -1,0 +1,64 @@
+Enum users.roles {
+  admin
+  customer
+}
+
+Table users {
+  id bigint [pk, increment]
+  name varchar [not null]
+  email varchar [not null]
+  role users.roles [not null]
+  phone varchar [not null]
+  encrypted_password varchar [not null]
+  reset_password_token varchar [not null]
+  reset_password_sent_at datetime [not null]
+  remember_created_at timestamp [not null]
+  created_at timestamp [not null]
+  update_at timestamp [not null]
+}
+
+Table categories {
+  id bigint [pk, increment]
+  name varchar [not null]
+  position int [not null, default: 0]
+  created_at timestamp [not null]
+  update_at timestamp [not null]
+}
+
+Table products {
+  id bigint [pk, increment]
+  name varchar [not null]
+  description text [not null]
+  price decimal [not null]
+  category_id bigint [not null]
+  publish boolean [not null]
+  created_at timestamp [not null]
+  update_at timestamp [not null]
+}
+
+Ref: products.category_id > categories.id
+
+Table address {
+    id bigint [not null]
+    name varchar [not null]
+    street varchar [not null]
+    neightborhood varchar [not null]
+    number varchar [not null]
+    zipcode varchar [not null]
+    city varchar [not null]
+    state varchar [not null]
+    main boolean [not null]
+    user_id bigint [not null]
+    created_at timestamp [not null]
+    update_at timestamp [not null]
+}
+
+Ref: address.user_id > user_id
+
+
+
+
+
+
+
+
