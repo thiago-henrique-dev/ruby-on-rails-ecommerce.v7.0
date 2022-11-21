@@ -57,7 +57,7 @@ group :development, :test do
   gem "debug", platforms: %i[ mri mingw x64_mingw ]
   gem 'awesome_print'
   gem 'dotenv-rails'
-  gem 'factory_bot_rails'
+  gem 'factory_bot_rails', '~> 4.10'
   gem 'faker'
   gem 'pry-rails'
   gem 'rspec-rails'
@@ -80,6 +80,7 @@ group :test do
   gem "capybara"
   gem "selenium-webdriver"
   gem "webdrivers"
+  gem 'webmock'
   gem 'database_cleaner'
   gem 'shoulda-matchers'
   gem 'simplecov'
