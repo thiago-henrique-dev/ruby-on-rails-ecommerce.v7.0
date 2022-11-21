@@ -3,7 +3,7 @@
 
 <% if user_signed_in? %>
     <h1>Bem vindo</h2>
-    <%= button_to 'logout', destroy_user_session_path, method: :delete %>
+    <%= link_to'logout', destroy_user_session_path, method: :delete %>
 <% else %>
     <p>Voce nao está logado, por favor. Faça o registro. 
         <%= link_to 'Sign up', new_user_registration_path %><br />
