@@ -53,7 +53,7 @@ Table address {
     update_at timestamp [not null]
 }
 
-Ref: address.user_id > user_id
+Ref: address.user_id > users_id
 
 
 
