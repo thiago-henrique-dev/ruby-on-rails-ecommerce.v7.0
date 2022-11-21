@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>THG</title>
+    <title>Ecomerce</title>
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
@@ -28,11 +28,12 @@
 
 			<div class="row justify-content-center">
 				<div class="col-md-6 col-lg-5">
-					<div class="login-wrap p-4 p-md-5">
+					<div class="login-wrap p-4 p-md-5" data-turbo="false">
 		      	<div class="icon d-flex align-items-center justify-content-center">
 		      		<span class="fa fa-user-o"></span>
 		      	</div>
 		      	<h3 class="text-center mb-4">Login</h3>
+           <%= render 'layouts/shared/flash' if flash.present? %>
 						<%= yield %>
 	        </div>
 				</div>
@@ -40,10 +41,7 @@
 		</div>
 	</section>
 
-	<script src="js/jquery.min.js"></script>
-  <script src="js/popper.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/main.js"></script>
+	
     
   </body>
 </html>
