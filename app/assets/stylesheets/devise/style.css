@@ -172,6 +172,11 @@ svg {
   overflow: hidden;
   vertical-align: middle; }
 
+ par{
+  align-items: center;
+  justify-content: center;
+ } 
+
 table {
   border-collapse: collapse; }
 
