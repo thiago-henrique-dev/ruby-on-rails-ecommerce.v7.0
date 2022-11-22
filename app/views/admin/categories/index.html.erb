@@ -1,0 +1,33 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Categorias dos Produtos</h1>
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card shadow mb-4">
+            <div class="card-body">
+              <table class="table table-striped">
+                <thead class="thead-light">
+                  <th>Nome</th>
+                  <th>Posição</th>
+                  <th>Ações</th>
+                </thead>
+                <tbody>
+                    <% @categories.each do |category| %>
+                  <tr>
+                    <td><%= category.name %></td>
+                    <td><%= category.position %></td>
+                  </tr>
+                  <td>
+                      <%= link_to "Detalhes", admin_category_path(category), class:"btn btn-primary btn-sm" %>
+                      <%= link_to "Editar", edit_admin_category_path(category), class:"btn btn-secondary btn-sm"%> 
+                      <%= link_to "Excluir", admin_category_path(category), method: :delete, class:"btn btn-danger btn-sm", data: {turbo: false, confirm: "Deseja realmente excluir"} %>
+                  </td>
+                  <% end %>
+                </tbody>
+              </table>
+              <%= link_to "Nova Categoria", new_admin_category_path, class:"btn btn-dark btn-sm" %>
+            </div>
+        </div>
+    </div>
+</div>
