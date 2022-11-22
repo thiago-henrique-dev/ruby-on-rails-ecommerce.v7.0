@@ -1,20 +1,21 @@
 {
-  "name": "app",
-  "private": "true",
-  "dependencies": {
-    "@hotwired/stimulus": "^3.1.0",
-    "@hotwired/turbo-rails": "^7.2.0",
-    "@popperjs/core": "^2.11.6",
-    "bootstrap": "^5.2.2",
-    "bootstrap-icons": "^1.9.1",
-    "bootstrap-sass": "^3.4.3",
-    "esbuild": "^0.15.14",
-    "sass": "^1.56.1"
-  },
-  "scripts": {
-    "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
-    "build:css": "sass ./app/assets/stylesheets/application.bootstrap.scss:./app/assets/builds/application.css",
-    "build:css:devise": "sass ./app/assets/stylesheets/devise..scss:./app/assets/builds/devise.css"
-
-  }
+    "name": "app",
+    "private": "true",
+    "dependencies": {
+        "@hotwired/stimulus": "^3.1.0",
+        "@hotwired/turbo-rails": "^7.2.0",
+        "@popperjs/core": "^2.11.6",
+        "bootstrap": "^5.2.2",
+        "bootstrap-icons": "^1.9.1",
+        "bootstrap-sass": "^3.4.3",
+        "esbuild": "^0.15.14",
+        "jquery": "^3.6.1",
+        "sass": "^1.56.1"
+    },
+    "scripts": {
+        "build": "esbuild app/javascript/*.* --bundle --sourcemap --outdir=app/assets/builds --public-path=assets",
+        "build:css": "sass ./app/assets/stylesheets/application.bootstrap.scss:./app/assets/builds/application.css",
+        "build:css:devise": "sass ./app/assets/stylesheets/devise.scss:./app/assets/builds/devise.css",
+        "build:css:admin": "sass ./app/assets/stylesheets/admin.scss:./app/assets/builds/admin.css"
+    }
 }
