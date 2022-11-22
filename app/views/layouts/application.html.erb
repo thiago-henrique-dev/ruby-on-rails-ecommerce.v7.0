@@ -10,11 +10,10 @@
     <%= javascript_include_tag "application", "data-turbo-track": "reload", defer: true %>
   </head>
 
-  <body>
-    <%= yield %>
+    
     <body>
        <%= render 'layouts/store/nav' %>
-
+        <%= yield %>
       
         <!-- Footer-->
           <%= render 'layouts/store/footer'%>
@@ -23,5 +22,5 @@
         <!-- Core theme JS-->
         <script src="js/scripts.js"></script>
     </body>
-  </body>
+  
 </html>
