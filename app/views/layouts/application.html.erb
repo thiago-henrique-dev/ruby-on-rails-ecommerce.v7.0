@@ -11,6 +11,14 @@
   </head>
 
   <body>
-    <%= yield %>
+    
+    <body>
+       <%= render 'layouts/store/nav' %>
+        <%= yield%>
+      
+        <!-- Footer-->
+          <%= render 'layouts/store/footer'%>
+  
+    </body>
   </body>
 </html>
