@@ -7,9 +7,6 @@ Rails.application.routes.draw do
   namespace :admin do
     root to: 'home#index'
     resources :categories
-  root "home#index"
-
-  namespace :admin do
-    root to: "home#index"
+    resources :products
   end
 end

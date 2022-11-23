@@ -1,6 +1,6 @@
 module Admin
     class CategoriesController < BaseController
-      before_action :set_category, only: %i[ show edit update destroy ]
+      before_action :set_category, only: %i[ show edit update new destroy ]
 
       # GET /categories or /categories.json
       def index
@@ -9,7 +9,7 @@ module Admin
 
       # GET /categories/1 or /categories/1.json
       def show
-        @set_category
+        
       end
 
       # GET /categories/new
