@@ -21,7 +21,7 @@ module Admin
         def update
             respond_to do |format|
             if @product.update(product_params)
-                  format.html { redirect_to admin_products_categories_path(@category), notice: "Produto atualizado com sucesso." }
+                  format.html { redirect_to admin_products_path(@category), notice: "Produto atualizado com sucesso." }
             else
                   format.html { render :edit, status: :unprocessable_entity }
             end
