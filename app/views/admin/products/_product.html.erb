@@ -1,0 +1,29 @@
+<div id="<%= dom_id product %>">
+
+<div class="row">
+    <div class="col-lg-6">
+        <div class="card shadow mb-4">
+            <div class="card-body">
+              <table class="table table-striped">
+                <thead class="thead-light">
+                  <tr>
+                    <th scope="col">Nome</th>
+                    <th scope="col">Descrição</th>
+                    <th scope="col">Price</th>
+                    <th scope="col">Public</th>
+
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td><%= product.name %></td>
+                    <td><%= product.description %></td>
+                    <td><%= product.price %></td>
+                    <td><%= product.publish %></td>
+                  </tr>
+                </tbody>
+              </table>
+          </div>
+    </div>
+</div>
+
