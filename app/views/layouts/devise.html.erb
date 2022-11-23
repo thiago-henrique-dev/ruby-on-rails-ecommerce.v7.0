@@ -16,8 +16,6 @@
   </head>
 
   <body>
-   
-    
 	<section class="ftco-section">
 		<div class="container">
 			<div class="row justify-content-center">
@@ -25,7 +23,6 @@
 					<h2 class="heading-section"><%= link_to "ECOMMERCE THG", root_path %></h2>
 				</div>
 			</div>
-
 			<div class="row justify-content-center">
 				<div class="col-md-6 col-lg-5">
 					<div class="login-wrap p-4 p-md-5" data-turbo="false">
@@ -33,15 +30,12 @@
 		      		<span class="fa fa-user-o"></span>
 		      	</div>
 		      	<h3 class="text-center mb-4"></h3>
-           <%= render 'layouts/shared/flash' if flash.present? %>
+          			 <%= render 'layouts/shared/flash' if flash.present? %>
 						<%= yield %>
 	        </div>
 				</div>
 			</div>
 		</div>
 	</section>
-
-	
-    
   </body>
 </html>
