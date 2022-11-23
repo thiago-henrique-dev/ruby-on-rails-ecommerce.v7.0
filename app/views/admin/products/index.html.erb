@@ -27,7 +27,10 @@
                   <td>
                       <%= link_to "Detalhes", admin_product_path(product), class:"btn btn-primary btn-sm" %>
                       <%= link_to "Editar", edit_admin_product_path(product), class:"btn btn-secondary btn-sm"%> 
-                      <%= link_to "Excluir", admin_product_path(product), method: :delete, class:"btn btn-danger btn-sm", data: {turbo: false, confirm: "Deseja realmente excluir"} %>
+                      <%= link_to "Excluir", admin_product_path(product), method: :delete, class:"btn btn-danger btn-sm", data: {
+                  turbo_method: :delete,
+                  turbo_confirm: "Deseja realmente excluir?"
+                }  %>
                   </td>
                   <% end %>
                 </tbody>
